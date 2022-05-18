@@ -81,7 +81,7 @@
 }
 
 \def\arraystretch{1}
-\renewcommand{\baselinestretch}{1.178}
+\renewcommand{\baselinestretch}{1.19}
 
 \begin{document}
 
@@ -92,57 +92,69 @@
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
-\begin{multicols}{3}
-% \par{\centering\normalsize {\textsc{Undergraduate student at Indian Institute of Technology, Kharagpur}}\par}\normalsize
-% \par{\centering\normalsize {\textsc{Department of Computer Science and Engineering}}\par}\normalsize
-%\par{{\begin{center}Dual Degree, \emph{Computer Science and Engineering}\end{center}}}
-\normalsize  \faGlobe\ {\href{https://ghostwriternr.me/}{\  ghostwriternr.me}}\\
-\normalsize \faGithub\ {\href{https://github.com/ghostwriternr}{\  ghostwriternr}}\\
-\normalsize  \faLinkedinSquare\ {\href{https://www.linkedin.com/in/naresh-ramesh}{\  naresh-ramesh}}\\
-\columnbreak
-\normalsize\par{\centering{\Huge\textsc{\textcolor{primary}{Naresh} Ramesh}}\par} % Your name
-\par{\centering\normalsize{\textsc{Bangalore, India\\}}\hfill\par}
-\columnbreak
-\raggedright\hfill\normalsize \faEnvelope\ {\href{mailto:nareshmdu@gmail.com}{\  nareshmdu@gmail.com}}\\
-\raggedright\hfill{\faPhone\ \  +91-7872833729}
-\end{multicols}
+\begin{center}
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedright
+\faGlobe\ {\href{https://ghostwriternr.me/}{ghostwriternr.me}}\par
+\faGithub\ {\href{https://github.com/ghostwriternr}{ghostwriternr}}\par
+\faLinkedinSquare\ {\href{https://www.linkedin.com/in/naresh-ramesh}{naresh-ramesh}} 
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\centering
+\Huge\textsc{\textcolor{primary}{Naresh} Ramesh}\par
+\normalsize{\textsc{Bangalore, India}}
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedleft
+\normalsize\faEnvelope\ {\href{mailto:nareshmdu@gmail.com}{nareshmdu@gmail.com}}\par
+\faPhone\ +91-7872833729\par
+\phantom{ }
+\end{minipage}
+\end{center}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE 
 %----------------------------------------------------------------------------------------
 
-\vspace{-0.7cm}
 \section{\textcolor{primary}{Work Experience}}
 
 \begin{tabularx}{\linewidth}{ l | X }
 
-\textsc{May 20} & \textbf{Software Engineer 2 - Mint}\hfill\textbf{Intuit, India}\\
-\textsc{Aug 18} & {- Built a configurable, scheduled notification pipeline for dynamic push notifications with 4\% CTR \& emails with 40\% open rates for Goals on Mint, iterating directly with PM, XD, mobile \& marketing teams.}\\
-& {- Led CCPA compliance for Mint Bills with a Kafka based architecture for reading and deleting all user data.}\\
-& \textbf{Software Engineer - Quickbooks Online (QBO)}\\
-& {- Migrated new signups for QBO's Self-Employed offering to a new billing platform with Kafka backed async GraphQL APIs, cross-channel (Web, iOS and Android) billing capabilities \& Redis caching for mobile offers.}\\
-& {- Took ownership of the platform's most used API and refactored it with clean abstraction, error \& performance monitoring on Splunk and new feature enhancements.}\\
+\textsc{Current} & \textbf{Software Engineer 3} \textsc{- Payments}\hfill\textbf{Setu, India}\\
+\textsc{Jun 20} & {- Fully managed, designed and built refunds on UPI, covering fund movement for automated \& API-initiated flows.}\\
+& {- Built a deeply customizable no-code tool for billers to integrate with BBPS by simply uploading Excel sheets.}\\
+& {- Wrote Setu's developer facing console from scratch, covering Auth with Keycloak, onboarding, configuration, KYC, real-time reports, 2FA, User \& API key management and support being embedded as iframe with seamless sign-in.}\\
+& {- Extended shortlink service for UPI with custom redirection for web, Android \& iOS and duplicate payment guards.}\\
+& {- As an early engineer, grew the team from 5 to 35, gained expertise in ECS, SQS, RDS, S3, DynamoDB, Cloudwatch, Terraform, Web security via VAPT audits, fixing production with service \& settlements continuity even after failures.}
+\multicolumn{2}{c}{} \\
+
+\textsc{May 20} & \textbf{Software Engineer 2} \textsc{- Mint}\hfill\textbf{Intuit, India}\\
+\textsc{Aug 18} & {- Built dynamic push notifications \& emails for Mint with 4\% \& 40\% CTR, iterating with PM, XD, mobile \& marketing.}\\
+& {- Led CCPA compliance for Mint Bills with Kafka-based async architecture for reading and deleting all user data.}\\
+& \textbf{Software Engineer} \textsc{- Quickbooks Online (QBO)}\\
+& {- Wrote async GraphQL APIs with Redis caching and cross-channel (Web, iOS, Android) billing for QB Self-Employed.}\\
+& {- Added features \& refactored critical API with abstract factory pattern, error \& performance monitoring on Splunk.}\\
 % & {- Reduced support turnaround time with a Spring + React tool for validating frequent customer care call drivers.}\\
 & {- Wrote a resilient Java library adopted by multiple teams to publish metrics to Wavefront for real-time dashboards.}\\
 & \textbf{Site Leader for Open Source}\\
-& {- Building the new Open Source and Inner Source program at Intuit, working across engineering and legal teams.}\\
+& {- Core contributor to the OSS and Inner Source program, working with engineering, legal and evangelism teams.}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{Jul 18} & \textbf{Google Summer of Code Intern}\hfill\textbf{gRPC (Cloud Native Computing Foundation)}\\
+\textsc{Jul 18} & \textbf{Google Summer of Code (GSoC) contributor}\hfill\textbf{gRPC (Cloud Native Computing Foundation)}\\
 \textsc{May 18}& {- Added Bazel support for building the gRPC Python codebase, with custom Skylark rules for the Cython modules.}\\
 & {- Extended support to Google's internal CI (Kokoro) as well, allowing incremental build \& test runs with Bazel.}\\
-& {- Reported issues in rules\_python's experimental pip support, module-level logger specification for python libraries.}\\
+& {- Reported issues in rules\_python's experimental pip support, module-level logger specification for libraries.}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{Nov 17} & \textbf{Remote Software Engineer Intern}\hfill\textbf{Weoptit, Finland}\\
-\textsc{Aug 17}& {- Built a pipeline to parse and store data from Finnish e-commerce sites to be used for AI based pricing optimisation.}\\
-& {- Wrote the parsers for 21 websites using Python, each deployed to production to periodically fetch data.}\\
-\multicolumn{2}{c}{} \\
+% \textsc{Nov 17} & \textbf{Remote Software Engineer Intern}\hfill\textbf{Weoptit, Finland}\\
+% \textsc{Aug 17}& {- Built a pipeline to parse and store data from Finnish e-commerce sites to be used for AI based pricing optimisation.}\\
+% & {- Wrote the parsers for 21 websites using Python, each deployed to production to periodically fetch data.}\\
+% \multicolumn{2}{c}{} \\
 
-\textsc{Jul 17} & \textbf{Software Engineer Intern}\hfill\textbf{Intuit, India}\\
-\textsc{May 17}& {- Wrote an end-to-end GraphQL API service in Java for opting out of QuickBooks Online's subscription.}\\
+\textsc{Jul 17} & \textbf{Software Engineer Intern} \textsc{- Quickbooks Online (QBO)}\hfill\textbf{Intuit, India}\\
+\textsc{May 17}& {- Wrote a GraphQL API in Java for opting out of a QBO trial subscription, with unit \& integration tests.}\\
 & {- Deployed a Machine Learning model to help Intuit predict potential paid customers for QBO from trial data.}\\
-& {- Reduced false positive error reports by 30\% from other teams to our team with a revamped internal tool.}\\
+& {- Revamped internal company creation tool with validations \& safeguards, reducing invalid configs to 30\%.}\\
 \multicolumn{2}{c}{} \\
 
 \textsc{Jun 16} & \textbf{Software Engineer Intern}\hfill\textbf{ezDI, India}\\
@@ -179,12 +191,11 @@
 \vspace{0.1cm}
 \section{\textcolor{primary}{Technical Skills}}
 
-\begin{tabular}{r|p{15cm}}
-\textsc{Languages} & Java, Python, C++, Javascript/Typescript, HTML/CSS\\
-% & \textit{Competent:} C, Golang \\
-\textsc{Libraries / Frameworks} & Spring, Spring Boot, Hibernate, React, Redux, NodeJS, Maven, Bazel, Junit, Mockito, Chai, Intern, Scikit-learn, OpenCV, Flask\\
-\textsc{Databases} & MySQL, MongoDB, Redis\\
-\textsc{Systems / Platforms} & Apache Kafka, Docker, Git, Linux, Android\\
+\begin{tabular}{r|p{20cm}}
+\textsc{Languages} & Go, Python, Javascript/Typescript, HTML, CSS\\
+\textsc{Frameworks} & React, Redux, Flask, Celery, NodeJS, Bazel, OpenAPI, Webpack, Babel, Fictoan, Framer, Marshmallow\\
+\textsc{Platforms} & AWS, Docker, Elasticsearch, Kibana, Grafana, Keycloak, OpenResty/Nginx, GitHub Actions, Gitlab CI/CD\\
+\textsc{Databases} & Postgres, DynamoDB, MongoDB, Redis
 %\textsc{Markup / Templating} & HTML, CSS, Sass
 \end{tabular}
 
@@ -198,7 +209,7 @@
 \begin{tabular}{p{19.7cm}}
 % \fontsize{9}{12}\selectfont{
 \begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
- \item[Learning to extract comparison points of entity pairs from Wikipedia articles\hfill{JCDL 2018}] Worked on a novel comparative text mining task using relational tuples to model and measure semantic commonality for two given documents and tabulating them. Published at the Proceedings of the 18th ACM/IEEE on Joint Conference on Digital Libraries (JCDL), 2018.
+ \item[Learning to extract comparison points of entity pairs from Wikipedia articles\hfill{JCDL 2018}] Novel comparative text mining using relational tuples to model \& measure semantic commonality for 2 documents and tabulating them. Published at Proceedings of the 18th ACM/IEEE on Joint Conference on Digital Libraries (JCDL), 2018.
 \end{description}
 \end{tabular}
 \end{document}
