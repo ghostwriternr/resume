@@ -56,8 +56,8 @@
  %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
-%\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
-\definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
+\definecolor{linkcolour}{RGB}{85,13,68} % Link color
+% \definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
 \usepackage{titlesec} % Used to customize the \section command
@@ -122,17 +122,17 @@
 \begin{tabularx}{\linewidth}{ l | X }
 
 \textsc{Current} & \textbf{Tech Lead} \textsc{- Payments}\hfill\textbf{Setu, India}\\
-\textsc{Jun 20} & {- As a lead for the UPI \& BBPS platforms, managed a reporting team of 6 engineers through an acquisition, processes to streamline on-call, incidents, planning, and documentation, led the designs for Setu's UPI Switch for Indian banks, rewriting money flow for 2 products in a month due to regulatory changes, internal tools \& dashboards atop a new data lake eliminating daily engineering support and security improvements passing 5 InfoSec Audits by regulators.}\\
+\textsc{Jun 20} & {- As a lead for the \href{https://setu.co/payments/upi-deeplinks}{UPI} \& \href{https://setu.co/payments/bbps}{BBPS} platforms, managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents and docs, led the designs for Setu's UPI Switch to support 150k merchants, revamped money flows for both products in a month amidst regulatory changes, internal tools \& dashboards atop a new data lake eliminating daily engineering support and security improvements passing 5 external InfoSec Audits.}\\
 & \textbf{Software Engineer 3} \textsc{- Payments}\\
+& {- As an early engineer, grew the team from 5 to 35, gained expertise in Go, ECS, SQS, RDS, S3, DynamoDB, Cloudwatch, Terraform, Web security, fixing production with service \& settlements continuity even after failures.}\\
 & {- Designed and built refunds on UPI, covering data and fund movement for automated \& API-initiated flows.}\\
 & {- Built a customizable no-code tool for billers to collect bill payments via BBPS by simply uploading Excel sheets.}\\
 & {- Wrote Setu's developer-facing console from scratch, covering Auth with Keycloak, onboarding, configuration, KYC, real-time reports, 2FA, User \& API key management and support being embedded as iframe with seamless sign-in.}\\
 & {- Extended UPI Deeplinks with a SSR NextJS shortlinks service with custom payment flows for web, Android \& iOS.}\\
-& {- As an early engineer, grew the team from 5 to 35, gained expertise in Go, ECS, SQS, RDS, S3, DynamoDB, Cloudwatch, Terraform, Web security, fixing production with service \& settlements continuity even after failures.}\\
 \multicolumn{2}{c}{} \\
 
 \textsc{May 20} & \textbf{Software Engineer 2} \textsc{- Mint}\hfill\textbf{Intuit, India}\\
-\textsc{Aug 18} & {- Built dynamic email \& push notifications for Mint with 4\% \& 40\% CTR, iterating with PM, XD, mobile \& marketing.}\\
+\textsc{Aug 18} & {- Built an email \& push notifications system for Mint's 4M MAU, iterating with PM, XD, mobile \& marketing teams.}\\
 & {- Led CCPA compliance for Bills on Mint with Kafka-driven async architecture for reading and deleting all user data.}\\
 & \textbf{Software Engineer} \textsc{- Quickbooks Online (QBO)}\\
 & {- Wrote async GraphQL APIs with Redis caching and cross-channel (Web, iOS, Android) billing for QB Self-Employed.}\\
