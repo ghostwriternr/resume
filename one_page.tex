@@ -1,23 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Naresh Ramesh CV
-% Heavily modified from Plasmati Graduate CV
 % LaTeX Template
 % Version 1.0 (15/06/20)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Author:
-% Naresh Ramesh (ghostwriternr@gmail.com)
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
-% Important note:
 % This template needs to be compiled with XeLaTeX.
-% The main document font is called Fontin and can be downloaded for free
-% from here: http://www.exljbris.com/fontin.html
-%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
@@ -27,67 +16,51 @@
 \documentclass[a4paper,10pt]{extarticle} % Default font size and paper size
 
 \usepackage{fontspec} % For loading fonts
-\defaultfontfeatures{Mapping=tex-text}
-% \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
-% \fontspec{[FontAwesome.otf]}
-\setmainfont[Path = ./Ubuntu/,  %% Optional; but UPDATE this if 
-                         %% your font files are in a folder
- Extension = .ttf,
- UprightFont = *-Regular,
- BoldFont = *-Bold,
- ItalicFont = *-Italic,
- SmallCapsFont = *-Medium]
-{Ubuntu}
-\fontspec{[fontawesome-webfont.ttf]}
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage[usenames,dvipsnames,x11names]{xcolor} % Required for specifying custom colors
+\usepackage{geometry}
+\usepackage{hyperref} % Required for adding links and customizing them
+\usepackage{titlesec} % Used to customize the \section command
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage{textcomp}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage[export]{adjustbox}
 
-\usepackage{color}
+
+% Font configuration
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Path = ./Ubuntu/, Extension = .ttf, UprightFont = *-Regular, BoldFont = *-Bold, ItalicFont = *-Italic, SmallCapsFont = *-Medium]{Ubuntu}
+
+% Color definitions
 \definecolor{primary}{RGB}{107, 16, 86}
 \definecolor{secondary}{RGB}{0, 0, 0}
-
-\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
-
-\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-
-%\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be 
-%\usepackage{fullpage}
-\usepackage{geometry}
-\geometry{a4paper,margin=0.45cm}
-%\geometry{a4paper,left=20mm, top=20mm}
- %To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
-
-\usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{RGB}{85,13,68} % Link color
-% \definecolor{linkcolour}{rgb}{0.3,0.3,0.3} % Link color
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
 
-\usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{0pt}{0pt} % Spacing around sections
+% Hyperlink setup
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-\usepackage{multicol}
-\setlength{\columnsep}{0cm}
+% Geometry configuration
+\geometry{a4paper,margin=0.4cm}
 
-\usepackage{tabularx}
+% Section title formatting with reduced space
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{1ex plus .3ex minus .2ex}{0.5ex plus .2ex minus .2ex}
 
-\usepackage{textcomp}
+% Itemize spacing within tabularx
+\setlist[itemize]{nosep, before=\vspace{-1ex}, after=\vspace{-1ex}}
 
-\usepackage{fontawesome}
-
-\usepackage{enumitem}
-\setlist[description]{%
-  topsep=10pt,               % space before start / after end of list
-  itemsep=1pt,               % space between items
-%  font={\bfseries\sffamily\color{red}}, % if colour is needed
-}
-
-\def\arraystretch{1}
-\renewcommand{\baselinestretch}{1.19}
-
+% Document begins
 \begin{document}
 
-\pagestyle{empty} % Removes page numbering
+% Increase line spacing
+\renewcommand{\baselinestretch}{1.29}\normalsize
 
-%\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+\pagestyle{empty} % Removes page numbering
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
@@ -102,12 +75,12 @@
 \begin{minipage}[b]{0.33333\textwidth}
 \centering
 \Huge\textsc{\textcolor{primary}{Naresh} Ramesh}\par
-\normalsize{\textsc{Bangalore, India}}
+\large{\textsc{London, United Kingdom}}
 \end{minipage}%
 \begin{minipage}[b]{0.33333\textwidth}
 \raggedleft
 \normalsize\faEnvelope\ {\href{mailto:nareshmdu@gmail.com}{nareshmdu@gmail.com}}\par
-\faPhone\ +91-7872833729\par
+\faPhone\ +44-7909804936\par
 \faLinkedinSquare\ {\href{https://www.linkedin.com/in/naresh-ramesh}{naresh-ramesh}}
 \phantom{ }
 \end{minipage}
@@ -117,101 +90,126 @@
 %	WORK EXPERIENCE 
 %----------------------------------------------------------------------------------------
 
+% \vspace{0.4cm}
+
 \section{\textcolor{primary}{Work Experience}}
 
-\begin{tabularx}{\linewidth}{ l | X }
+\begin{tabularx}{\linewidth}{l | X}
 
-\textsc{Jul 23} & \textbf{Tech Lead} \textsc{- Payments}\hfill\textbf{Setu, India}\\
-\textsc{Jun 20} & {- As a lead for the \href{https://setu.co/payments/upi-deeplinks}{UPI} \& \href{https://setu.co/payments/bbps}{BBPS} platforms, managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents and docs, led the designs for Setu's UPI Switch to support 150k merchants, revamped money flows for both products in a month amidst regulatory changes, internal tools \& dashboards atop a new data lake eliminating daily engineering support and security improvements passing 5 external InfoSec Audits.}\\
+\textsc{Mar '25} & \textbf{Co-founder \& CTO}\hfill\raisebox{.2\height}{\includegraphics[height=1.3em,valign=c]{logos/codestory.png}\includegraphics[height=1.2em,valign=c]{logos/yc.png}\hspace{0.5em}}\textbf{CodeStory (Y Combinator S23)}\\
+\textsc{Jul '23} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item Led engineering for Aide, an AI-native IDE, processing 10 billion+ LLM tokens a day with a state-of-the-art 62\% score on the real-world engineering benchmark, SWE-bench Verified, achieved by scaling test-time inference.
+  \item Exposed editor internals like AST, LSP, document buffer, SCM and terminal as real-time inputs and 'tools' over a bi-directional streaming RPC layer for the code editing agent to power inline auto-completion and chat features.
+  \item Built code search and repomap (using tree-sitter) as tools for the LLM to extract context from large codebases.
+  \item Optimised buffer decorations and real-time diff rendering and UX to match 200 tokens/sec streaming output.
+  \item Used Electron webviews for browser previews of frontend codebases, with built-in react-devtools mapping DOM nodes to source code as context, and auto-capturing console logs, network logs and screenshots for the agent.
+  % \item Deployed the auth and metering Go service, hit for every LLM call with client-side buffering, to GCP Cloud Run.
+  \item Raised \$1.4M in pre-seed funding, managed 2 founding engineers and a Discord community with 2k+ members.
+\end{itemize}\\
+\multicolumn{2}{c}{} \\
+
+\textsc{Jul '23} & \textbf{Tech Lead} \textsc{- Payments}\hfill\raisebox{-.2\height}{\includesvg[height=1.3em]{logos/setu.svg} \hspace{0.3em}}\textbf{Setu}\\
+\textsc{Jun '20} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item Co-led the design and implementation for UPI switch, an enterprise-ready implementation of the UPI acquirer spec handling 500 million transactions a month from 150k merchants, deployed on-prem for Indian banks.
+  \item Rebuilt the money movement architecture within a month amidst major regulatory changes, with no downtime.
+  % \item Successfully passed InfoSec requirements for acquiring a Payment Aggregator license through several security improvements to the platform, failing which would have curbed the organisation's ability to process payments.
+  \item Managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents and docs, built internal tools \& dashboards atop a new data lake to eliminate daily engineering support.
+\end{itemize}\\\\
 & \textbf{Software Engineer 3} \textsc{- Payments}\\
-& {- As an early engineer, grew the team from 5 to 35, gained expertise in Go, ECS, SQS, RDS, S3, DynamoDB, Cloudwatch, Terraform, Web security, fixing production with service \& settlements continuity even after failures.}\\
-& {- Designed and built refunds on UPI, covering data and fund movement for automated \& API-initiated flows.}\\
-& {- Built a customizable no-code tool for billers to collect bill payments via BBPS by simply uploading Excel sheets.}\\
-& {- Wrote Setu's developer-facing console from scratch, covering Auth with Keycloak, onboarding, configuration, KYC, real-time reports, 2FA, User \& API key management and support being embedded as iframe with seamless sign-in.}\\
-& {- Extended UPI Deeplinks with a SSR NextJS shortlinks service with custom payment flows for web, Android \& iOS.}\\
+& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.0\baselineskip}]
+  \item One of only 2 engineers owning Setu's highest revenue generating products, UPI Deeplinks \& BBPS Bill Collect.
+  \item Designed and built refunds on UPI Deeplinks, with data and fund movement for automated \& API-initiated flows.
+  \item Wrote Setu's developer-facing console from scratch, covering authentication \& authorization using Keycloak, 2FA, onboarding, product configuration, real-time \& offline KYC, reports, user \& API key management.
+  % \item Managed the whitelabelled integration of BBPS Collect into RazorPay with seamless sign-in for their merchants.
+  \item Built a customizable no-code tool for billers to collect bill payments via BBPS by simply uploading Excel sheets.
+  \item Created a specialised shortlinks service for UPI Deeplinks to handle the payment flows for web, Android \& iOS.
+  \item As an early engineer, grew the team from 5 to 35, gained expertise in Go, ECS, SQS, RDS, S3, DynamoDB, Cloudwatch, Terraform, Web security, fixing production with service \& settlements continuity even after failures.
+\end{itemize}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{May 20} & \textbf{Software Engineer 2} \textsc{- Mint}\hfill\textbf{Intuit, India}\\
-\textsc{Aug 18} & {- Built an email \& push notifications system for Mint's 4M MAU, iterating with PM, XD, mobile \& marketing teams.}\\
-& {- Led CCPA compliance for Bills on Mint with Kafka-driven async architecture for reading and deleting all user data.}\\
+\textsc{May '20} & \textbf{Software Engineer 2} \textsc{- Mint}\hfill\raisebox{-.1\height}{\includesvg[height=0.9em]{logos/intuit.svg} \hspace{0.3em}}\textbf{Intuit}\\
+\textsc{Aug '18} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item Migrated the email \& push notifications system (Android + iOS) for Mint's 4M MAU to a new system built on Kafka, allowing scheduled and on-demand pushes configured through an internal dashboard.
+  \item Led CCPA compliance implementation for 'bills' with an async architecture for reading and deleting user data.
+\end{itemize}\\\\
 & \textbf{Software Engineer} \textsc{- Quickbooks Online (QBO)}\\
-& {- Wrote async GraphQL APIs with Redis caching and cross-channel (Web, iOS, Android) billing for QB Self-Employed.}\\
-& {- Refactored critical APIs with recommended design patterns with error \& performance monitoring on Splunk.}\\
-% & {- Reduced support turnaround time with a Spring + React tool for validating frequent customer care call drivers.}\\
-& {- Wrote a Java library adopted across teams to publish business \& performance metrics with retries to Wavefront.}\\
-& \textbf{Site Leader for Open Source}\\
-& {- One of 14 core contributors to set up the OSS and Inner Source program for Intuit, liaising with engg \& legal teams.}\\
+& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item Built GraphQL APIs with caching enabled through Redis for cross-channel (Web, iOS and Android) billing support.
+  % \item Refactored 3 critical APIs with better design patterns and set up error \& performance monitoring on Splunk.
+  \item Wrote a Java library adopted by several teams to publish business \& performance metrics to Wavefront.
+\end{itemize}\\\\
+& \textbf{Site Leader for Open Source} \textsc{- Intuit India}\\
+& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item One of only 14 people working globally to set up Intuit's Open Source and Inner Source program from scratch, with me leading open source licensing specification with the legal team and building the community in India.
+\end{itemize}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{Jul 18} & \textbf{Google Summer of Code (GSoC) contributor}\hfill\textbf{gRPC (Cloud Native Computing Foundation)}\\
-\textsc{May 18}& {- Added Bazel support for building the gRPC Python codebase, with custom Skylark rules for the Cython modules.}\\
-& {- Extended support to Google's internal CI (Kokoro) as well, allowing incremental build \& test runs with Bazel.}\\
-& {- Reported issues in rules\_python's experimental pip support, module-level logger specification for libraries.}\\
+\textsc{Jul '18} & \textbf{Google Summer of Code (GSoC) student}\hfill\raisebox{-.1\height}{\includesvg[height=1.2em]{logos/google.svg}\hspace{0.2em}\raisebox{.4\height}{\includegraphics[height=1.2em,valign=c]{logos/cncf.png}}\hspace{0.5em}}\textbf{gRPC (Google / Cloud Native Computing Foundation)}\\
+\textsc{May '18}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+  \item Added support for building gRPC Python's codebase with Bazel, using custom Skylark rules for Cython modules.
+  \item Extended support to Google's internal CI (Kokoro) as well, allowing incremental build \& test runs with Bazel.
+  \item Reported issues with Python library module-level logger specification and Bazel's experimental pip support.
+\end{itemize}\\
 \multicolumn{2}{c}{} \\
 
-% \textsc{Nov 17} & \textbf{Remote Software Engineer Intern}\hfill\textbf{Weoptit, Finland}\\
-% \textsc{Aug 17}& {- Built a pipeline to parse and store data from Finnish e-commerce sites to be used for AI based pricing optimisation.}\\
-% & {- Wrote the parsers for 21 websites using Python, each deployed to production to periodically fetch data.}\\
+% \textsc{Jul '17} & \textbf{Software Engineer Intern} \textsc{- Quickbooks Online (QBO)}\hfill\raisebox{-.1\height}{\includesvg[height=0.9em]{logos/intuit.svg} \hspace{0.3em}}\textbf{Intuit}\\
+% \textsc{May '17}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+%   \item Wrote a GraphQL API in Java for opting out of a QBO trial subscription, with 95\% unit \& integration test coverage.
+%   \item Worked on a Machine Learning model for predicting potential paid customers for QBO from trial user data.
+% \end{itemize}\\
 % \multicolumn{2}{c}{} \\
 
-\textsc{Jul 17} & \textbf{Software Engineer Intern} \textsc{- Quickbooks Online (QBO)}\hfill\textbf{Intuit, India}\\
-\textsc{May 17}& {- Wrote a GraphQL API in Java for opting out of a QBO trial subscription, with 95\% unit \& integration tests.}\\
-& {- Worked on a Machine Learning model for predicting potential paid customers for QBO from trial user data.}\\
-% & {- Revamped an internal tool for company creation with validations \& safeguards, reducing invalid configs to 30\%.}\\
-\multicolumn{2}{c}{} \\
+% \textsc{Jun '16} & \textbf{Software Engineer Intern}\hfill\raisebox{.1\height}{\includegraphics[height=2em,valign=c]{logos/ezdi.jpeg}}\textbf{ezDI}\\
+% \textsc{May '16}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+%   \item Automated migration \& replication of real-time data from AWS RDS to Redshift, optimized for full-table queries.
+%   \item Integrated a Business Intelligence (BI) system to show data from Redshift in the enterprise analytics platform.
+% \end{itemize}\\
+% \multicolumn{2}{c}{} \\
 
-\textsc{Jun 16} & \textbf{Software Engineer Intern}\hfill\textbf{ezDI, India}\\
-%\textsc{May 2016}& {- Worked on integrating a Business Intelligence tool that aggregates data from all of ezDI's products for easy analytics.}\\
-\textsc{May 16}& {- Automated migration \& replication of real-time data from AWS RDS to Redshift, optimized for full-table queries.}\\
-& {- Integrated a Business Intelligence (BI) platform pulling data from Redshift into the enterprise analytics platform.}\\
-\multicolumn{2}{c}{} \\
-
-% \textsc{Apr 16} & \textbf{Software Engineer} \textsc{- Image Processing}\hfill\textbf{Autonomous Underwater Vehicle Research Group}\\
-% % \textsc{Feb 2015} & \textbf{Guide: }\textmd{\href{http://iitkgp.ac.in/fac-profiles/showprofile.php?empcode=aWmdU}{Professor C. S. Kumar}}\\
-% \textsc{Feb 15} & {- Added image processing logic for Buoy detection and path following underwater using OpenCV on ROS.}\\
-% & {- Wrote Neural Network based adaptive image segmentation for the bot to adapt to dynamic lighting conditions.}\\
-% & {- Created an AngularJS frontend for remotely monitoring and controlling the bot's image parameters.}\\
+% \textsc{Apr '16} & \textbf{Software Engineer} \textsc{- Image Processing}\hfill\raisebox{.1\height}{\includegraphics[height=1.2em,valign=c]{logos/auv.jpeg}\hspace{0.3em}}\textbf{Autonomous Underwater Vehicle Research Group}\\
+% \textsc{Feb '15} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-0.8\baselineskip}]
+%   \item Wrote underwater path following \& buoy detection algorithms with OpenCV on ROS (Robot Operating System).
+%   \item Worked on adaptive image segmentation using neural networks for adjusting to dynamic lighting conditions.
+%   \item Built an AngularJS dashboard for remotely monitoring and controlling the bot's image parameters.
+% \end{itemize}\\
+% \multicolumn{2}{c}{}
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
+\vspace{-2.4em}
 
-\vspace{-0.5cm}
 \section{\textcolor{primary}{Education}}
-
-\begin{tabular}{r|p{17.5cm}}	
-\textsc{2013-2018} & Bachelors + Masters in \textbf{Computer Science and Engineering} - Indian Institute of Technology, Kharagpur\\
-%\hfill\textsc{Cgpa}: 7.9/10.0\\
+\begin{tabularx}{\linewidth}{r|X}
+% \textsc{2022} & General Management Program\hfill Stoa School\hspace{0.3em}\raisebox{-.2\height}{\includesvg[height=1.2em]{logos/stoa.svg}}\\
+\textsc{\hspace{0.3em}2013 - 2018} & Bachelors + Masters in \textbf{Computer Science and Engineering}\hspace{2.1em}Indian Institute of Technology, Kharagpur\hspace{0.3em}\raisebox{-.2\height}{\includesvg[height=1.2em]{logos/iitkgp.svg}}\\
 &Teaching assistant for Compilers (CS31003) and Data Structures (CS19001)\\
-\end{tabular}
+\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS 
 %----------------------------------------------------------------------------------------
+% \vspace{-1em}
 
-\vspace{0.1cm}
-\section{\textcolor{primary}{Technical Skills}}
-
-\begin{tabular}{r|p{20cm}}
-\textsc{Languages} & Go, Python, Javascript/Typescript, HTML, CSS, SQL\\
-\textsc{Frameworks} & React, Redux, Flask, Celery, NodeJS, Bazel, OpenAPI, Webpack, Ginkgo, Fictoan, Framer, Marshmallow\\
-\textsc{Platforms} & AWS, Docker, Elasticsearch, Kibana, Grafana, Keycloak, OpenResty/Nginx, GitHub Actions, Gitlab CI/CD\\
-\textsc{Databases} & Postgres, DynamoDB, MongoDB, Redis
-%\textsc{Markup / Templating} & HTML, CSS, Sass
-\end{tabular}
+% \section{\textcolor{primary}{Technical Skills}}
+% \begin{tabularx}{\linewidth}{r|X}
+% \textsc{Languages} & Javascript/Typescript, Go, Python, HTML, CSS, SQL\\
+% \textsc{Tools} & Terraform, Docker, go-chi, sqlc, React, NextJS, Tailwind, Redux, TanStack Query, Electron, Flask, Celery, NodeJS, Bazel, OpenAPI, Webpack, Vite, Ginkgo, Playwright, Vitest, Framer, Marshmallow\\
+% \textsc{Platforms} & AWS, GCP, Elasticsearch, Kibana, Grafana, Stripe, WorkOS, Keycloak, OpenResty/Nginx, GH Actions, Gitlab CI\\
+% \textsc{Databases} & Postgres, DynamoDB, MongoDB, Redis, SQLite
+% \end{tabularx}
 
 %----------------------------------------------------------------------------------------
 %	Publications
 %----------------------------------------------------------------------------------------
+% \vspace{-1em}
 
-% \vspace{-0.6cm}
-\section{\textcolor{primary}{Publications}}
-\vspace{-0.6cm}
-\begin{tabular}{p{19.7cm}}
-% \fontsize{9}{12}\selectfont{
-\begin{description}[style=nextline, font=$\bullet$\hspace{2mm}\normalsize]
- \item[Learning to extract comparison points of entity pairs from Wikipedia articles\hfill{JCDL 2018}] Novel comparative text mining using relational tuples to model \& measure semantic commonality for 2 documents and tabulating them. Published at Proceedings of the 18th ACM/IEEE on Joint Conference on Digital Libraries (JCDL), 2018.
-\end{description}
-\end{tabular}
+% \section{\textcolor{primary}{Publications}}
+% \begin{tabularx}{\linewidth}{X}
+% \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.2\baselineskip}, after=\vspace{-1.8\baselineskip}]
+%     \item Sandeep Kumar Pani, \textbf{Naresh R.}, Pawan Goyal, and Plaban Kumar Bhowmick. 2018. \textbf{Learning to Extract Comparison Points of Entity Pairs from Wikipedia Articles.} In Proceedings of the 18th ACM/IEEE on Joint Conference on Digital Libraries (JCDL '18). Association for Computing Machinery, New York, NY, USA, 373–374. {\href{https://doi.org/10.1145/3197026.3203909}{https://doi.org/10.1145/3197026.3203909}}
+% \end{itemize}
+% \end{tabularx}
+
 \end{document}

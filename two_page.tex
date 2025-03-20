@@ -58,7 +58,7 @@
 \begin{document}
 
 % Increase line spacing
-\renewcommand{\baselinestretch}{1.3}\normalsize
+\renewcommand{\baselinestretch}{1.29}\normalsize
 
 \pagestyle{empty} % Removes page numbering
 
@@ -75,12 +75,12 @@
 \begin{minipage}[b]{0.33333\textwidth}
 \centering
 \Huge\textsc{\textcolor{primary}{Naresh} Ramesh}\par
-\large{\textsc{Bangalore, India}}
+\large{\textsc{London, United Kingdom}}
 \end{minipage}%
 \begin{minipage}[b]{0.33333\textwidth}
 \raggedleft
 \normalsize\faEnvelope\ {\href{mailto:nareshmdu@gmail.com}{nareshmdu@gmail.com}}\par
-\faPhone\ +91-7872833729\par
+\faPhone\ +44-7909804936\par
 \faLinkedinSquare\ {\href{https://www.linkedin.com/in/naresh-ramesh}{naresh-ramesh}}
 \phantom{ }
 \end{minipage}
@@ -96,20 +96,23 @@
 
 \begin{tabularx}{\linewidth}{l | X}
 
-\textsc{Current} & \textbf{Co-founder \& CTO}\hfill\raisebox{.2\height}{\includegraphics[height=1.3em,valign=c]{logos/codestory.png}\includegraphics[height=1.2em,valign=c]{logos/yc.png}\hspace{0.5em}}\textbf{CodeStory (YC S23)}\\
+\textsc{Mar '25} & \textbf{Co-founder \& CTO}\hfill\raisebox{.2\height}{\includegraphics[height=1.3em,valign=c]{logos/codestory.png}\includegraphics[height=1.2em,valign=c]{logos/yc.png}\hspace{0.5em}}\textbf{CodeStory (Y Combinator S23)}\\
 \textsc{Jul '23} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
-  \item Working on an AI-first code editor, Aide by CodeStory, forked from the Open Source VSCode project by Microsoft.
-  \item Built an editor-native AI agent atop GPT-3.5 \& 4, capable of gathering codebase-wide context and making multi-step, multi-file edits using local embeddings and code graphs indexed and stored with Qdrant and SQLite.
-  \item Setup CI pipelines on GitHub \& CircleCI to build and notarize the editor for all operating systems \& architectures.
-  \item Shipped the first version in 2 weeks during the YCombinator S23 batch and raised \$1.4M in pre-seed funding.
+  \item Led engineering for Aide, an AI-native IDE, processing 10 billion+ LLM tokens a day with a state-of-the-art 62\% score on the real-world engineering benchmark, SWE-bench Verified, achieved by scaling test-time inference.
+  \item Exposed editor internals like AST, LSP, document buffer, SCM and terminal as real-time inputs and 'tools' over a bi-directional streaming RPC layer for the code editing agent to power inline auto-completion and chat features.
+  \item Built code search and repomap (using tree-sitter) as tools for the LLM to extract context from large codebases.
+  \item Optimised buffer decorations and real-time diff rendering and UX to match 200 tokens/sec streaming output.
+  \item Used Electron webviews for browser previews of frontend codebases, with built-in react-devtools mapping DOM nodes to source code as context, and auto-capturing console logs, network logs and screenshots for the agent.
+  \item Deployed the auth and metering Go service, hit for every LLM call with client-side buffering, to GCP Cloud Run.
+  \item Raised \$1.4M in pre-seed funding, managed 2 founding engineers and a Discord community with 2k+ members.
 \end{itemize}\\
 \multicolumn{2}{c}{} \\
 
 \textsc{Jul '23} & \textbf{Tech Lead} \textsc{- Payments}\hfill\raisebox{-.2\height}{\includesvg[height=1.3em]{logos/setu.svg} \hspace{0.3em}}\textbf{Setu}\\
 \textsc{Jun '20} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
-  \item Co-led the design and implementation for UPI switch, an enterprise-ready implementation of the UPI acquirer spec to handle 500 million transactions a month from 150k merchants, deployed on-prem for Indian banks.
-  \item Rewrote the money movement flow for 2 critical products in a month amidst major regulatory changes.
-  \item Successfully led InfoSec review for acquiring a Payment Aggregator license and made several security improvements to the platform, failing which would have curbed the organisation's ability to process payments.
+  \item Co-led the design and implementation for UPI switch, an enterprise-ready implementation of the UPI acquirer spec handling 500 million transactions a month from 150k merchants, deployed on-prem for Indian banks.
+  \item Rebuilt the money movement architecture within a month amidst major regulatory changes, with no downtime.
+  \item Successfully passed InfoSec requirements for acquiring a Payment Aggregator license through several security improvements to the platform, failing which would have curbed the organisation's ability to process payments.
   \item Managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents and docs, built internal tools \& dashboards atop a new data lake to eliminate daily engineering support.
 \end{itemize}\\\\
 & \textbf{Software Engineer 3} \textsc{- Payments}\\
@@ -133,7 +136,7 @@
 & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
   \item Built GraphQL APIs with caching enabled through Redis for cross-channel (Web, iOS and Android) billing support.
   \item Refactored 3 critical APIs with better design patterns and set up error \& performance monitoring on Splunk.
-  \item Wrote a Java library adopted by several teams teams to publish business \& performance metrics to Wavefront.
+  \item Wrote a Java library adopted by several teams to publish business \& performance metrics to Wavefront.
 \end{itemize}\\\\
 & \textbf{Site Leader for Open Source} \textsc{- Intuit India}\\
 & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
@@ -156,12 +159,12 @@
 \end{itemize}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{Jun '16} & \textbf{Software Engineer Intern}\hfill\raisebox{.1\height}{\includegraphics[height=2em,valign=c]{logos/ezdi.jpeg}}\textbf{ezDI}\\
-\textsc{May '16}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
-  \item Automated migration \& replication of real-time data from AWS RDS to Redshift, optimized for full-table queries.
-  \item Integrated a Business Intelligence (BI) system to show data from Redshift in the enterprise analytics platform.
-\end{itemize}\\
-\multicolumn{2}{c}{} \\
+% \textsc{Jun '16} & \textbf{Software Engineer Intern}\hfill\raisebox{.1\height}{\includegraphics[height=2em,valign=c]{logos/ezdi.jpeg}}\textbf{ezDI}\\
+% \textsc{May '16}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
+%   \item Automated migration \& replication of real-time data from AWS RDS to Redshift, optimized for full-table queries.
+%   \item Integrated a Business Intelligence (BI) system to show data from Redshift in the enterprise analytics platform.
+% \end{itemize}\\
+% \multicolumn{2}{c}{} \\
 
 \textsc{Apr '16} & \textbf{Software Engineer} \textsc{- Image Processing}\hfill\raisebox{.1\height}{\includegraphics[height=1.2em,valign=c]{logos/auv.jpeg}\hspace{0.3em}}\textbf{Autonomous Underwater Vehicle Research Group}\\
 \textsc{Feb '15} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-0.8\baselineskip}]
@@ -216,7 +219,7 @@
 \section{\textcolor{primary}{Hackathons}}
 \begin{tabularx}{\linewidth}{X}
 \begin{itemize}[leftmargin=*, nosep, before=\vspace{-0.8\baselineskip}, after=\vspace{-1.0\baselineskip}]
-    \item \textbf{\href{https://forum.fossunited.org/t/foss-hack-2020-results}{Runner-up, FOSS Hack 2020}}: Awarded 25k INR for building a service to receive HTTP requests, transform the payload using user-written scripts and publish to listening webhooks.
+    \item \textbf{\href{https://forum.fossunited.org/t/foss-hack-2020-results}{Runner-up, FOSS Hack 2020}}: Won 25k INR for building a service to receive HTTP requests, transform the payload using user-written scripts and publish to listening webhooks.
 \end{itemize}
 \end{tabularx}
 
@@ -226,9 +229,9 @@
 
 \section{\textcolor{primary}{Technical Skills}}
 \begin{tabularx}{\linewidth}{r|X}
-\textsc{Languages} & Go, Python, Javascript/Typescript, HTML, CSS, SQL\\
-\textsc{Frameworks} & React, Redux, NextJS, Flask, Celery, NodeJS, Bazel, OpenAPI, Webpack, Ginkgo, Framer, Marshmallow\\
-\textsc{Platforms} & AWS, Docker, Electron, Elasticsearch, Kibana, Grafana, Keycloak, OpenResty/Nginx, GitHub Actions, Gitlab CI\\
+\textsc{Languages} & Javascript/Typescript, Go, Python, HTML, CSS, SQL\\
+\textsc{Tools} & Terraform, Docker, go-chi, sqlc, React, NextJS, Tailwind, Redux, TanStack Query, Electron, Flask, Celery, NodeJS, Bazel, OpenAPI, Webpack, Vite, Ginkgo, Playwright, Vitest, Framer, Marshmallow\\
+\textsc{Platforms} & AWS, GCP, Elasticsearch, Kibana, Grafana, Stripe, WorkOS, Keycloak, OpenResty/Nginx, GH Actions, Gitlab CI\\
 \textsc{Databases} & Postgres, DynamoDB, MongoDB, Redis, SQLite
 \end{tabularx}
 
