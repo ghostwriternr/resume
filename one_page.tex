@@ -98,26 +98,27 @@
 
 \textsc{Mar '25} & \textbf{Co-founder \& CTO}\hfill\raisebox{.2\height}{\includegraphics[height=1.3em,valign=c]{logos/codestory.png}\includegraphics[height=1.2em,valign=c]{logos/yc.png}\hspace{0.5em}}\textbf{CodeStory (Y Combinator S23)}\\
 \textsc{Jul '23} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
-  \item Led engineering for Aide, an AI-native IDE, processing 10 billion+ LLM tokens a day with a state-of-the-art 62\% score on the real-world engineering benchmark, SWE-bench Verified, achieved by scaling test-time inference.
-  \item Exposed editor internals like AST, LSP, document buffer, SCM and terminal as real-time inputs and 'tools' over a bi-directional streaming RPC layer for the code editing agent to power inline auto-completion and chat features.
-  \item Built code search and repomap (using tree-sitter) as tools for the LLM to extract context from large codebases.
-  \item Optimised buffer decorations and real-time diff rendering and UX to match 200 tokens/sec streaming output.
-  \item Used Electron webviews for browser previews of frontend codebases, with built-in react-devtools mapping DOM nodes to source code as context, and auto-capturing console logs, network logs and screenshots for the agent.
+  \item Led engineering for Aide, an Open Source AI-native IDE with 2k+ stars processing 10 billion+ LLM tokens a day.
+  \item Shipped State-of-the-Art coding agents in the editor, topping SWE-bench, the real-world software engineering benchmark, with a 43\% score in July '24 and 62.2\% in December '24 achieved by scaling test-time inference.
+  \item Exposed editor internals like AST, LSP, document buffer, SCM and terminal as real-time inputs \& APIs over a bi-directional streaming RPC layer to a Rust binary for powering inline completion, agentic chat, and code editing.
+  \item Built code search and repomap tools with ripgrep \& tree-sitter for the agents to filter context in large codebases.
+  \item Optimised buffer decorations \& real-time diff rendering in TypeScript to match 200 tokens/sec streaming output.
+  \item Hooked into Electron internals to create an in-editor browser to preview frontend codebases, map DOM nodes to source code using react-devtools, and auto-capturing console logs, network logs \& screenshots for the agent.
   % \item Deployed the auth and metering Go service, hit for every LLM call with client-side buffering, to GCP Cloud Run.
   \item Raised \$1.4M in pre-seed funding, managed 2 founding engineers and a Discord community with 2k+ members.
 \end{itemize}\\
 \multicolumn{2}{c}{} \\
 
 \textsc{Jul '23} & \textbf{Tech Lead} \textsc{- Payments}\hfill\raisebox{-.2\height}{\includesvg[height=1.3em]{logos/setu.svg} \hspace{0.3em}}\textbf{Setu}\\
-\textsc{Jun '20} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+\textsc{Jun '20} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.6\baselineskip}]
   \item Co-led the design and implementation for UPI switch, an enterprise-ready implementation of the UPI acquirer spec handling 500 million transactions a month from 150k merchants, deployed on-prem for Indian banks.
   \item Rebuilt the money movement architecture within a month amidst major regulatory changes, with no downtime.
   % \item Successfully passed InfoSec requirements for acquiring a Payment Aggregator license through several security improvements to the platform, failing which would have curbed the organisation's ability to process payments.
-  \item Managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents and docs, built internal tools \& dashboards atop a new data lake to eliminate daily engineering support.
+  \item Managed a reporting team of 6 engineers through an acquisition, streamlined planning, on-call, incidents, and docs, built internal tools \& dashboards atop a new data lake to eliminate daily engineering support.
 \end{itemize}\\\\
 & \textbf{Software Engineer 3} \textsc{- Payments}\\
 & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.0\baselineskip}]
-  \item One of only 2 engineers owning Setu's highest revenue generating products, UPI Deeplinks \& BBPS Bill Collect.
+  \item One of only 2 engineers owning Setu's highest revenue-generating products, UPI Deeplinks \& BBPS Bill Collect.
   \item Designed and built refunds on UPI Deeplinks, with data and fund movement for automated \& API-initiated flows.
   \item Wrote Setu's developer-facing console from scratch, covering authentication \& authorization using Keycloak, 2FA, onboarding, product configuration, real-time \& offline KYC, reports, user \& API key management.
   % \item Managed the whitelabelled integration of BBPS Collect into RazorPay with seamless sign-in for their merchants.
@@ -128,12 +129,12 @@
 \multicolumn{2}{c}{} \\
 
 \textsc{May '20} & \textbf{Software Engineer 2} \textsc{- Mint}\hfill\raisebox{-.1\height}{\includesvg[height=0.9em]{logos/intuit.svg} \hspace{0.3em}}\textbf{Intuit}\\
-\textsc{Aug '18} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
-  \item Migrated the email \& push notifications system (Android + iOS) for Mint's 4M MAU to a new system built on Kafka, allowing scheduled and on-demand pushes configured through an internal dashboard.
+\textsc{Aug '18} & \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.6\baselineskip}]
+  \item Migrated the email \& push notifications system (Android + iOS) for Mint's 4M MAU to a new system built on Kafka, allowing scheduled and on-demand pushes configured through an internal React dashboard.
   \item Led CCPA compliance implementation for 'bills' with an async architecture for reading and deleting user data.
 \end{itemize}\\\\
 & \textbf{Software Engineer} \textsc{- Quickbooks Online (QBO)}\\
-& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
+& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.6\baselineskip}]
   \item Built GraphQL APIs with caching enabled through Redis for cross-channel (Web, iOS and Android) billing support.
   % \item Refactored 3 critical APIs with better design patterns and set up error \& performance monitoring on Splunk.
   \item Wrote a Java library adopted by several teams to publish business \& performance metrics to Wavefront.
@@ -144,11 +145,11 @@
 \end{itemize}\\
 \multicolumn{2}{c}{} \\
 
-\textsc{Jul '18} & \textbf{Google Summer of Code (GSoC) student}\hfill\raisebox{-.1\height}{\includesvg[height=1.2em]{logos/google.svg}\hspace{0.2em}\raisebox{.4\height}{\includegraphics[height=1.2em,valign=c]{logos/cncf.png}}\hspace{0.5em}}\textbf{gRPC (Google / Cloud Native Computing Foundation)}\\
+\textsc{Jul '18} & \textbf{Google Summer of Code (GSoC) contributor}\hfill\raisebox{-.1\height}{\includesvg[height=1.2em]{logos/google.svg}\hspace{0.2em}\raisebox{.4\height}{\includegraphics[height=1.2em,valign=c]{logos/cncf.png}}\hspace{0.5em}}\textbf{gRPC (Google / Cloud Native Computing Foundation)}\\
 \textsc{May '18}& \begin{itemize}[leftmargin=*, nosep, before=\vspace{-1.0\baselineskip}, after=\vspace{-1.3\baselineskip}]
   \item Added support for building gRPC Python's codebase with Bazel, using custom Skylark rules for Cython modules.
   \item Extended support to Google's internal CI (Kokoro) as well, allowing incremental build \& test runs with Bazel.
-  \item Reported issues with Python library module-level logger specification and Bazel's experimental pip support.
+  \item Investigated issues with Python library module-level logger specification and Bazel's experimental pip support.
 \end{itemize}\\
 \multicolumn{2}{c}{} \\
 
@@ -178,13 +179,13 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
-\vspace{-2.4em}
+\vspace{-2.3em}
 
 \section{\textcolor{primary}{Education}}
 \begin{tabularx}{\linewidth}{r|X}
 % \textsc{2022} & General Management Program\hfill Stoa School\hspace{0.3em}\raisebox{-.2\height}{\includesvg[height=1.2em]{logos/stoa.svg}}\\
-\textsc{\hspace{0.3em}2013 - 2018} & Bachelors + Masters in \textbf{Computer Science and Engineering}\hspace{2.1em}Indian Institute of Technology, Kharagpur\hspace{0.3em}\raisebox{-.2\height}{\includesvg[height=1.2em]{logos/iitkgp.svg}}\\
-&Teaching assistant for Compilers (CS31003) and Data Structures (CS19001)\\
+\textsc{\hspace{0.3em}2013 - 2018} & Bachelors + Masters in \textbf{Computer Science and Engineering}\hspace{2.1em}\raisebox{-.2\height}{\includesvg[height=1.2em]{logos/iitkgp.svg}}\hspace{0.3em}Indian Institute of Technology, Kharagpur\\
+&Teaching Assistant for Compilers (CS31003) and Data Structures (CS19001)\\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
